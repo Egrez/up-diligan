@@ -3510,3 +3510,8 @@ input, select, textarea {
 			}
 
 	}
+
+	.center-justified {
+		text-align: justify;
+		text-align-last: center;
+	}
