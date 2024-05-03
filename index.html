@@ -212,7 +212,23 @@
 					<p>For more information</p>
 					<ul class="actions special">
 						<li><a href="#" class="button wide primary">Sign Up</a></li>
-						<li><a href="#" class="button wide">Learn More</a></li>
+						<li><a id="learn-more" class="button wide">Learn More</a></li>
+						<div id="learn-more-popup" class="popup">
+							<div class="popup-content">
+								<span id="learn-more-close" class="close">&times;</span>
+								<div style="color: black;">
+									<blockquote>The name Ka-igib-an is a word play of the terms “igib” (to fetch water) and “kaibigan” (friend).</blockquote>
+									<p>The organization will be <strong style="color: black;">university-wide</strong>. In other words, it is open for all <strong style="color: black;">University of the Philippines</strong> students regardless of what campus they are in.</p>
+									<h3 style="color: black;">Our recruitment strategies</h3>
+									<ul style="text-align: left;">
+										<li style="padding: 0;"><strong style="color: black;">Email UP students</strong> with the help of Office of the Vice Chancellor for Student Affairs and existing student organizations.</li>
+										<li style="padding: 0;">The organization will consider having a <strong style="color: black;">physical class-to-class recruitment process</strong> where the members of UP Diligan will entice students of the potential programs they could be a part of.</li>
+										<li style="padding: 0;"><strong style="color: black;">Event promotions</strong> by giving out free water (e.g. UP Fair, Maskipaps, UAAP).</li>
+										<li style="padding: 0;"><strong style="color: black;">Join university-wide organization events</strong> like org fairs and ACLE in order to further publicize the organization and its advocacies.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</ul>
 				</div>
 			</section>
@@ -557,7 +573,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				var popups = ['igib', 'sisid', 'agos']
+				var popups = ['igib', 'sisid', 'agos', 'learn-more']
 				popups.map(item => {
 					var popup = document.getElementById(`${item}-popup`)
 					document.getElementById(item).addEventListener('click', function() {
