@@ -65,7 +65,7 @@
 
 		<!-- Header -->
 			<section id="header" style="min-height: 100vh;">
-				<div class="inner">
+				<div class="inner" style="top: 0; position: relative;">
 					<span class="icon solid major" style="width: 200px; height: 200px; background-image: url('images/org-logo.png'); background-position: center; background-size: 350px 350px;"></span>
 					<h1><strong>Access to clean water is a human right.</strong></h1>
 					<h4 class="center-justified">UP Diligan is a student organization advocating for universal access to clean water, <br /> with its focus set on establishing clean water infrastructure in the academe and <br /> local communities. </h4>
@@ -632,6 +632,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						}
 					})
 				});
+				
+				var counter = 1;
+				const interval = setInterval(function() {
+					const header = document.getElementById('header');
+					header.style.backgroundImage = `url('assets/css/images/org-pic${counter + 1}.png')`;
+					header.style.transition = "3s";
+
+					counter = ((counter + 1) % 5)
+				}, 5000);
 			</script>
 	</body>
 </html>
