@@ -1,0 +1,137 @@
+
+.content {
+    width: 45em;
+    max-width: calc(100% - 4em);
+    margin: 0 auto;
+}
+
+     .content > :last-child {
+        margin-bottom: 0;
+    }
+
+    .style2 > .content {
+        -moz-transition: -moz-transform 1s ease;
+        -webkit-transition: -webkit-transform 1s ease;
+        -ms-transition: -ms-transform 1s ease;
+        transition: transform 1s ease;
+        -moz-transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        position: relative;
+        width: 35%;
+        margin: 0;
+    }
+
+    .style2.inactive.scroll-left > .content {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    .style2.inactive.scroll-right > .content {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+
+    .style3 .content > header {
+        margin-bottom: 2em;
+    }
+
+
+
+@media screen and (max-width: 1920px) {
+
+    .style2 .content {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .style2 .content {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .style2 .content {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+    .content br {
+        display: none;
+    }
+
+        .style2 .content {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            -moz-transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
+
+        .main.fullscreen {
+            height: auto !important;
+        }
+
+        .main.style2 {
+            padding: 6em 15px 6em 15px;
+        }
+
+            .main.style2:before, .main.style2:after {
+                display: none !important;
+            }
+
+            .button.anchored {
+                display: none;
+            }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .content {
+        max-width: calc(100% - 1.5em);
+    }
+
+}
+
+.main.style2.scroll-right {
+    -moz-justify-content: -moz-flex-end;
+    -webkit-justify-content: -webkit-flex-end;
+    -ms-justify-content: -ms-flex-end;
+    justify-content: flex-end;
+}
+
+.anchored {
+position: absolute;
+bottom: 1em;
+left: 50%; 
+transform: translate(-50%, -50%);
+}
+
+.fullscreen.main.style2{
+height: 100vh;
+background-position: center;
+background-size: cover;
+}
+
+.content.box h2{
+color: black;
+font-weight: 900;
+}
