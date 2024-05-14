@@ -14,11 +14,24 @@
 		<link rel="icon" type="image/png" href="images/org-logo.png" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			blockquote {
+				margin: 2em;
+			}
+
+			figcaption {
+				margin: 2em;
+				font-size: 0.75em;
+			}
+
 			.align-justify {
 				text-align: justify;
 			}
 
 			@media screen and (max-width: 980px) {
+				blockquote {
+					margin: 0;
+				}
+
 				.align-justify {
 					text-align: center;
 				}
@@ -78,8 +91,16 @@
 			<section id="header" style="height: 100vh; background-image: url('images/issue0.png');">
 				<div class="inner" style="top: 0; position: relative;">
 					<h1><strong>Water inaccessibility</strong></h1>
-					<h4 class="center-justified"> Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, <br /> in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. <br /> Curabitur egestas consectetur magna. </h4>
+					<figure>
+						<blockquote>
+							Billions of people around the world are continuing to suffer from poor access to water, sanitation and hygiene, according to a new report by UNICEF and the World Health Organization. Some 2.2 billion people around the world do not have safely managed drinking water services, 4.2 billion people do not have safely managed sanitation services, and 3 billion lack basic handwashing facilities.
+						</blockquote>
+						<figcaption>World Health Organization. Retrieved from <a href="https://www.who.int/news/item/18-06-2019-1-in-3-people-globally-do-not-have-access-to-safe-drinking-water-unicef-who" target="_blank">https://www.who.int/news/item/18-06-2019-1-in-3-people-globally-do-not-have-access-to-safe-drinking-water-unicef-who</a></figcaption>
+					</figure>
 				</div>
+				<ul class="actions special" style="padding-bottom: 2em;">
+					<li><a href="index.html" class="button scrolly">Go back to home</a></li>
+				</ul>
 				<a href="#one" class="button scrolly anchored"><span class="icon solid fas fa-chevron-down"></span></a>
 			</section>
 
