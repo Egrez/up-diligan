@@ -2947,7 +2947,7 @@ input, select, textarea {
 		/* background-color: #4686a0; */
 		color: rgba(255, 255, 255, 0.70);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/org-pic1.png");
+		background-image: url("images/org-pic1.jpg");
 		background-position: center;
 		background-size: cover;
 		/* background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
@@ -3117,7 +3117,7 @@ input, select, textarea {
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
-			background-image: url("images/org-pic2.png"), url("images/org-pic3.png"), url("images/org-pic4.png"), url("images/org-pic5.png");
+			background-image: url("images/org-pic2.jpg"), url("images/org-pic3.jpg"), url("images/org-pic4.jpg"), url("images/org-pic5.jpg");
 			/* background-image: linear-gradient(45deg, #4fa49a, #4361c2); */
 			content: '';
 			height: 100%;
