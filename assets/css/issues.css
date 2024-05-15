@@ -118,17 +118,22 @@
     justify-content: flex-end;
 }
 
+.anchored-container {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+}
+
 .anchored {
-position: absolute;
-bottom: 1em;
-left: 50%; 
-transform: translate(-50%, -50%);
+    position: sticky;
+    top: 2em;
+    transform: translate(-50%, 0);
 }
 
 .fullscreen.main.style2{
-height: 100vh;
-background-position: center;
-background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
 .content.box h2{
