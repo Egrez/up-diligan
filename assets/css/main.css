@@ -2845,7 +2845,7 @@ input, select, textarea {
 		padding: 6em 0 4em 0 ;
 		display: flex;
 		position: relative;
-		overflow-x: hidden;
+		overflow-x: clip;
 	}
 
 		.main.style1 {
