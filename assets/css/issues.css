@@ -1,142 +1,140 @@
-
-.content {
-    width: 45em;
-    max-width: calc(100% - 4em);
-    margin: 0 auto;
-}
-
-     .content > :last-child {
-        margin-bottom: 0;
-    }
-
-    .style2 > .content {
-        -moz-transition: -moz-transform 1s ease;
-        -webkit-transition: -webkit-transform 1s ease;
-        -ms-transition: -ms-transform 1s ease;
-        transition: transform 1s ease;
-        -moz-transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        transform: translateZ(0);
-        position: relative;
-        width: 35%;
-        margin: 0;
-    }
-
-    .style2.inactive.scroll-left > .content {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-
-    .style2.inactive.scroll-right > .content {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-
-
-    .style3 .content > header {
-        margin-bottom: 2em;
-    }
-
-
-
-@media screen and (max-width: 1920px) {
-
-    .style2 .content {
-        width: 40%;
-    }
-
-}
-
-@media screen and (max-width: 1280px) {
-
-    .style2 .content {
-        width: 50%;
-    }
-
-}
-
-@media screen and (max-width: 1000px) {
-
-    .style2 .content {
-        width: 60%;
-    }
-
-}
-
-@media screen and (max-width: 736px) {
-
-    .content br {
-        display: none;
-    }
-
-        .style2 .content {
-            width: 100%;
-            max-width: 100%;
-            text-align: center;
-            -moz-transform: none;
-            -webkit-transform: none;
-            -ms-transform: none;
-            transform: none;
-        }
-
-        .main.fullscreen {
-            height: auto !important;
-        }
-
-        .main.style2 {
-            padding: 6em 15px 6em 15px;
-        }
-
-            .main.style2:before, .main.style2:after {
-                display: none !important;
-            }
-
-            .button.anchored {
-                display: none;
-            }
-
-
-}
-
-@media screen and (max-width: 480px) {
-
-    .content {
-        max-width: calc(100% - 1.5em);
-    }
-
-}
-
-.main.style2.scroll-right {
-    -moz-justify-content: -moz-flex-end;
-    -webkit-justify-content: -webkit-flex-end;
-    -ms-justify-content: -ms-flex-end;
-    justify-content: flex-end;
-}
-
-.anchored-container {
+/* Article styles were sourced from https://www.freecodecamp.org/news/how-to-recreate-mediums-article-layout-with-css-grid-b4608792bad1/ */
+.header {
+    text-align: center;
     position: absolute;
-    left: 50%;
-    height: 100%;
+    width: 100%;
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
 }
 
-.anchored {
-    position: sticky;
-    top: 2em;
-    transform: translate(-50%, 0);
+body {
+    margin: 0;
 }
 
-.fullscreen.main.style2{
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
+/* Article styles were sourced from https://www.freecodecamp.org/news/how-to-recreate-mediums-article-layout-with-css-grid-b4608792bad1/ */
+article {  
+    display: none;  
+    grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr; 
 }
 
-.content.box h2{
-color: black;
-font-weight: 900;
+
+    article > * {
+        grid-column: 4;
+        min-width: 0;
+    }
+
+    article > h1 {
+        font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-weight: 700;
+        font-size: 42px;
+        color: #242424;
+    }
+
+    article > blockquote {  
+        grid-column: 3 / 5;  
+        padding-left: 10px;  
+        color: #666;  
+        border-left: 3px solid black;  
+    }
+
+    article > p {    
+        --x-height-multiplier: 0.375;
+        --baseline-multiplier: 0.17;
+        font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+        letter-spacing: .01rem;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 21px;
+        line-height: 1.58;
+        letter-spacing: -.003em;
+        color: rgba(0,0,0,.84);
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+.full-width {  
+    grid-column: 1 / -1;  
+    margin: 20px 0;  
+}
+
+.medium-width {  
+    grid-column: 2 / -2;  
+    margin: 20px 0;  
+}
+
+
+.close {  
+    grid-column: -1;  
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 3em;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+.profile, .actions {
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 500;
+}
+
+.profile {
+    height: 52px;
+}
+
+    .profile > div {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .profile img {
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 12px;
+    }
+
+.actions {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 32px;
+    margin-bottom: 56px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .actions img {
+        width: 25px;
+        height: 25px;
+        filter: invert(45%) sepia(11%) saturate(8%) hue-rotate(334deg) brightness(89%) contrast(86%);
+    }
+
+    .actions > div {
+        height: 41px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+
+    .actions span {
+        margin-right: 25px;
+        margin-left: 4px;
+    }
+
+.right-actions img {
+    margin-right: 25px;
 }
