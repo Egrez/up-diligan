@@ -293,7 +293,7 @@ renderer.domElement.addEventListener('pointerup', (event) => {
             header.innerText = "Thank you for keeping our waters clean (´▽`ʃ♡ƪ)"
         }
         else{
-            header.innerText = `Clean ${articles.length-articleCounter} trash bags`;
+            header.innerText = `Clean ${articles.length-articleCounter} trash bag${articleCounter == 6 ? '' : 's'}`;
         }
         
     }
