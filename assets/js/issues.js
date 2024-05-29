@@ -271,6 +271,7 @@ closeButtons.forEach((closeButton) => closeButton.onclick = () => {
 // reference: https://stackoverflow.com/questions/12800150/catch-the-click-event-on-a-specific-mesh-in-the-renderer?rq=3
 // Event handler for disappearing trash bags and appearing articles
 let articleCounter = 0
+let trashCount = 7;
 renderer.domElement.addEventListener('pointerup', (event) => {
 
     let raycaster = new THREE.Raycaster();
@@ -285,17 +286,44 @@ renderer.domElement.addEventListener('pointerup', (event) => {
 
     if (intersects.length > 0) {
         trashes.remove( intersects[0]["object"]["parent"] );
+
+        articleCounter = (articleCounter == 6) ? 0 : articleCounter;
+
         articles[articleCounter].style.display = "grid";
         articleCounter += 1;
+
         canvas.style.display = "none";
         header.style.display = "none";
-        if (articleCounter == 7) {
-            header.innerText = "Thank you for keeping our waters clean (´▽`ʃ♡ƪ)"
+
+        console.log(trashCount);
+
+        trashCount -= 1;
+        if (trashCount == 0) {
+            header.innerText = "Thank you for keeping our waters clean (´▽`ʃ♡ƪ)";
         }
         else{
-            header.innerText = `Clean ${articles.length-articleCounter} trash bag${articleCounter == 6 ? '' : 's'}`;
+            header.innerText = `Clean ${trashCount} trash bag${trashCount == 1 ? '' : 's'}`;
         }
         
     }
 });
+
+let nextButtons = document.querySelectorAll(".next");
+let prevButtons = document.querySelectorAll(".prev");
+
+// Event handlers for cycling articles
+nextButtons.forEach((nextButton) => nextButton.onclick = () => {
+    nextButton.parentElement.parentElement.style.display = "none";
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    articleCounter += 1;
+    articles[articleCounter].style.display = "grid";
+})
+prevButtons.forEach((prevButton) => prevButton.onclick = () => {
+    prevButton.parentElement.parentElement.style.display = "none";
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    articleCounter -= 1;
+    articles[articleCounter].style.display = "grid";
+})
 
