@@ -138,15 +138,3 @@ figure {
 .right-actions img {
     margin-right: 25px;
 }
-
-.article-nav {  
-    font-size: 3em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.article-nav span {
-    width: 64px;
-    height: 64px;
-}
